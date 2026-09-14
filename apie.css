@@ -59,6 +59,8 @@ ul {
     width: 500px;
 }
 
+/* footer section */
+
 svg {
     fill: #fff;
     width: 30px;
@@ -68,8 +70,9 @@ svg {
     text-align: center;
 }
 footer {
-    margin-top: 150px;
+    margin-top: 100px;
 }
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -78,8 +81,8 @@ footer {
     margin: 30px 75px;
 }
 .footer-bottom {
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,5 +90,23 @@ footer {
 .footer__socials svg {
     border: 2px solid #fff;
     border-radius: 35px;
-    padding: 10px;
+    margin: 15px;
+    padding: 20px;
+}
+.footer__socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-nav-col {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+.footer-nav-col ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
 }
