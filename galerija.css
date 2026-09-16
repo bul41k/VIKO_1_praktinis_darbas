@@ -13,16 +13,33 @@ body {
 .gallery-header {
     margin: 75px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.gallery-item img {
-    width: 100px;
-    height: auto;
+
+hr {
+    width: 800px;
+    height: 5px;
 }
+
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Расстояние между картинками */
+    justify-content: center; /* Центрирование всей сетки */
+    align-items: flex-start; /* Выравнивание всех элементов строго по верхнему краю */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    height: 220px; /* Задаем одинаковую высоту для всех карточек */
+    display: flex;
+}
+
+.gallery-item img {
+    height: 100%;
+    width: auto; /* Ширина высчитывается сама в зависимости от пропорций фото */
+    object-fit: cover;
+    display: block;
 }
