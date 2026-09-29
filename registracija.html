@@ -21,38 +21,41 @@
     </ul>
     </header>
 
-    <main>
-        <div class="damnS"></div>
-        <div class="registration">
-            <div class="h2">
-                <h2>Registacion</h2>
-            </div>
-            <div class="form">  
-                <form>
-
-                    <label for="fname">Full name:</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-
-                    <label for="lname">Date of birth:</label><br>
-                        <input type="text" id="date" name="date"><br>
-
-                    <label for="styles">Choose your style</label><br>
-                        <input type="text" id="styles" name="styles"><br>
+        <main class="registration-page">
+            <div class="registration-card">
+                <img class="registration-card__image" src="img/Dance.jpg" alt="breakdance">
+                
+                <div class="registration-card__content">
+                    <div class="registration-card__header">
+                        <h2 class="registration-card__title">Registration</h2>
+                    </div>
                     
-                    <label for="email">Email</label><br>
-                        <input type="text" id="email" name="email"><br>
+                    <div class="registration-card__form-wrapper">   
+                        <form class="form">
 
-                    <label for="phone">Phone</label><br>
-                        <input type="text" id="phone" name="phone"><br>
+                            <label class="form__label" for="fname">Full name:</label><br>
+                            <input class="form__input" type="text" id="fname" name="fname"><br>
 
-                    <input type="submit" value="Submit">
+                            <label class="form__label" for="lname">Date of birth:</label><br>
+                            <input class="form__input" type="date" id="date" name="date"><br>
 
-                </form>
-            </div>
-        </div>
-        <img src="img/Dance.jpg" alt="breakdance">
-    </main>
+                            <label class="form__label" for="styles">Choose your style</label><br>
+                            <input class="form__input" type="text" id="styles" name="styles"><br>
+                            
+                            <label class="form__label" for="email">Email</label><br>
+                            <input class="form__input" type="email" id="email" name="email"><br>
 
-    
+                            <label class="form__label" for="phone">Phone</label><br>
+                            <input class="form__input" type="tel" id="phone" name="phone"><br>
+
+                            <input class="form__submit" type="submit" value="Submit">
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>    
+        </main>
 </body>
+
 </html>
