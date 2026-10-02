@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: "Montserrat", sans-serif;
@@ -26,4 +27,44 @@ ul {
     flex-direction: row;
     gap: 75px;
     list-style-type: none;
+}
+
+/* main section */
+main {
+    display: flex;
+}
+.registration-card {
+    margin: 30px 75px;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+.form__input {
+    width: 500px;
+}
+.registration-card__content {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: center;
+}
+.registration-card__content .form__submit {
+    background-color: #de2020ba;
+    border-style: none;
+    color: #fff;
+}
+.registration-card__header {
+    margin-bottom: 15px;
+}
+.registration-card__header h2 {
+    font-size: 75px;
+}
+.form__submit {
+    margin-top: 15px;
+    padding: 20px 45px;
+    border-radius: 35px;
+}
+.form__input {
+    margin-bottom: 10px;
+    padding: 12px 15px;
 }
