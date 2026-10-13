@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: "Montserrat", sans-serif;
@@ -11,16 +12,23 @@ body {
 
 /* header */
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
 header {
     display: flex;
     justify-content: space-between;
     margin: 30px 75px;
     align-items: baseline;
+    color: #fff;
 }
+
+#main-title { 
+    font-weight: 800; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -45,7 +53,7 @@ ul {
 }
 
 .about-hero h1 {
-    color: #000;
+    color: #000 !important;
 }
 
 .about-content {
@@ -62,52 +70,19 @@ ul {
 
 /* footer section */
 
-svg {
-    fill: #fff;
-    width: 30px;
-    height: 30px;
-}
-.logo {
-    text-align: center;
-}
-footer {
-    margin-top: 100px;
+.footer {
+    margin-top: 240px;
+    width: auto;
+    height: 50px;
+    background-color: #942a2a;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 75px;
-}
-.footer-bottom {
-    margin-top: 25px;
-    margin-bottom: 25px;
+.footer .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.footer__socials svg {
-    border: 2px solid #fff;
-    border-radius: 35px;
-    margin: 15px;
-    padding: 20px;
-}
-.footer__socials {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.footer-nav-col {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-}
-.footer-nav-col ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+.footer p {
+    font-size: 18px;
+    font-weight: 200px;
 }
