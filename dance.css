@@ -36,6 +36,8 @@ ul {
     list-style-type: none;
 }
 
+
+
 /* main section */
 
 /* hip hop */
@@ -44,6 +46,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    max-width: 800px;
 }
 
 h1 {
@@ -60,6 +63,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    max-width: 800px;
 }
 
 h1 {
@@ -76,6 +80,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    max-width: 800px;
 }
 
 h1 {
@@ -92,6 +97,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    max-width: 800px;
 }
 
 h1 {
@@ -107,6 +113,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    max-width: 800px;
 }
 
 h1 {
@@ -117,3 +124,21 @@ h1 {
     font-weight: 800;
 }
 
+/* aside */
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.sidebar-column {
+    display: flex;
+    align-self: center; /* Изменили flex-start на center, теперь он по центру по вертикали! */
+    flex-direction: column;
+    width: 275px;
+    height: 250px;
+    margin-left: 75px;
+    padding: 25px;
+    border-radius: 35px;
+    border-style: solid;
+    border-color: #942a2a;
+}
