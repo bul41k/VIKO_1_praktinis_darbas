@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +39,7 @@ ul {
 
 /* main */
 .main-title__dance {
+    margin-top: 100px;
     text-align: center;
     font-weight: 700;
     margin-bottom: 25px;
@@ -59,4 +62,7 @@ ul {
     color: #fff;
     background-image: url(img/Fly.jpg);
     background-size: cover;
+}
+.item p {
+    
 }
