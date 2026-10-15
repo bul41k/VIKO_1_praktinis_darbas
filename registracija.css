@@ -12,16 +12,23 @@ body {
 
 /* header section */
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
 header {
     display: flex;
     justify-content: space-between;
     margin: 30px 75px;
     align-items: baseline;
+    color: #fff;
 }
+
+#main-title { 
+    font-weight: 800; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -49,7 +56,7 @@ main {
     justify-content: center;
 }
 .registration-card__content .form__submit {
-    background-color: #de2020ba;
+    background-color: #de2020ba !important;
     border-style: none;
     color: #fff;
 }

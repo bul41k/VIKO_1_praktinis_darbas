@@ -1,23 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kontaktai - Rhythm Pulse</title>
     <link rel="stylesheet" href="contacts.css">
 </head>
 <body>
-        <header>
-    <h2>
-        <a href="pagrindinis.html">Rhythm Pulse</a>
-    </h2>
 
-    <ul>
+    <!-- Header section -->
+    <header>
+        <h2>
+            <a href="pagrindinis.html" id="main-title">Rhythm Pulse</a>
+        </h2>
+
+        <ul>
             <li><a href="apie.html">Apie</a></li>
             <li><a href="contacts.html">Kontaktai</a></li>
             <li><a href="galerija.html">Galerija</a></li>
             <li><a href="registracija.html">Registracija</a></li>
-    </ul>
+        </ul>
     </header>
+
+    <!-- main section -->
+    <main class="contact-page">
+        <div class="contact-container">
+            
+            <!-- left section -->
+            <div class="contact-info">
+                <h1 class="contact-heading">Kontaktai</h1>
+                <hr>
+                <p class="contact-subtitle">Turite klausimų? Susisiekite su mumis!</p>
+
+                <div class="contact-details">
+                    <p class="contact-item">
+                        <span class="icon">📍</span> Antakalnio g. 4A, Vilnius
+                    </p>
+                    <p class="contact-item">
+                        <span class="icon">✉️</span> info@rhythmpulse.lt
+                    </p>
+                    <p class="contact-item">
+                        <span class="icon">📞</span> +370 600 55 444
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- right section  -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    
+                    <label class="form-label" for="vardas">Vardas *</label>
+                    <input class="form-input" type="text" id="vardas" name="vardas" required>
+
+                    <label class="form-label" for="email">El. pašto adresas *</label>
+                    <input class="form-input" type="email" id="email" name="email" required>
+
+                    <label class="form-label" for="tekstas">Tekstas *</label>
+                    <textarea class="form-textarea" id="tekstas" name="tekstas" rows="6" required></textarea>
+
+                    <button type="submit" class="form-submit">SIŲSTI</button>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>

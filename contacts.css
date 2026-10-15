@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: "Montserrat", sans-serif;
@@ -26,4 +27,49 @@ ul {
     flex-direction: row;
     gap: 75px;
     list-style-type: none;
+}
+
+/* main section */
+.contact-page {
+    margin: 0px 75px;
+} 
+.contact-container {
+    margin-top: 175px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    gap: 15px;
+}
+.contact-info h1 {
+    font-size: 95px;
+    font-weight: 800;
+}
+hr {
+    width: 150px;
+    height: 1px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-input {
+    padding: 12px 15px;
+    width: 750px;
+}
+.form-textarea {
+    height: 200px;
+}
+
+.form-submit {
+    width: 125px;
+    margin-top: 15px;
+    padding: 20px 10px;
+    border-radius: 35px;
 }

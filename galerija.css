@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: "Montserrat", sans-serif;
@@ -11,16 +12,23 @@ body {
 
 /* header section */
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
 header {
     display: flex;
     justify-content: space-between;
     margin: 30px 75px;
     align-items: baseline;
+    color: #fff;
 }
+
+#main-title { 
+    font-weight: 800; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -43,6 +51,10 @@ ul {
     flex-direction: column;
 }
 
+.gallery-title {
+    color: #fff !important;
+}
+
 hr {
     width: 800px;
     height: 0px;
@@ -51,21 +63,21 @@ hr {
 .gallery-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Расстояние между картинками */
-    justify-content: center; /* Центрирование всей сетки */
-    align-items: flex-start; /* Выравнивание всех элементов строго по верхнему краю */
+    gap: 15px; 
+    justify-content: center;
+    align-items: flex-start; 
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .gallery-item {
-    height: 220px; /* Задаем одинаковую высоту для всех карточек */
+    height: 220px;
     display: flex;
 }
 
 .gallery-item img {
     height: 100%;
-    width: auto; /* Ширина высчитывается сама в зависимости от пропорций фото */
+    width: auto; 
     object-fit: cover;
     display: block;
 }
@@ -85,5 +97,23 @@ hr {
 }
 .footer p {
     font-size: 18px;
-    font-weight: 200px;
+    font-weight: 200;
+}
+
+/* aside */
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sidebar-column {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 250px;
+    padding: 25px;
+    border-radius: 35px;
+    border-style: solid;
+    border-color: #942a2a;
 }
