@@ -8,6 +8,9 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: #0D0D0D;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* header */
@@ -36,42 +39,75 @@ ul {
     list-style-type: none;
 }
 
+header ul li a {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease; 
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px; 
+    background-color: #de2020; 
+    transition: width 0.3s ease; 
+}
+
+header ul li a:hover {
+    color: #de2020; 
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+
 /* main seciton */
+main {
+    flex: 1;
+}
 .about-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 45px;
 }
 
 .about-hero {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
-    margin-bottom: 40px ;
-    background-color: #fff;
-    padding: 45px 45px;
-}
-
-.about-hero h1 {
-    color: #000 !important;
+    margin-top: 10px;
+    margin-bottom: 20px ;
+    /* background-color: #fff; */
+    padding: 20px 45px;
 }
 
 .about-content {
     display: flex;
     justify-content: center;
 }
+.about-content__container {
+    margin: auto 75px;
+}
 
 .about-content p {
     display: flex;
-    text-align: center;
     width: 500px;
     line-height: 1.6;
+}
+
+.about-content_main-title {
+    text-align: center;
+}
+h1 {
+    margin-bottom: 10px;
 }
 
 /* footer section */
 
 .footer {
-    margin-top: 240px;
+    margin-top: auto;
     width: auto;
     height: 50px;
     background-color: #942a2a;
@@ -81,21 +117,23 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 .footer p {
     font-size: 18px;
-    font-weight: 200px;
+    font-weight: 200;
 }
 
 /* aside */
 .box {
     display: flex;
     flex-wrap: wrap;
-    gap: 145px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
 }
 .sidebar-column {
     display: flex;
-    align-self: flex-start;
     flex-direction: column;
     width: 275px;
     height: 250px;
@@ -104,4 +142,63 @@ ul {
     border-radius: 35px;
     border-style: solid;
     border-color: #942a2a;
+}
+
+
+/* Секция услуг */
+.services-section {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.services-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #0D0D0D;
+    margin-top: 20px;
+}
+
+.services-card__image {
+    width: 350px;
+    height: 350px;
+}
+
+.services-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px
+}
+
+.services-card__info h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.services-card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.service-link {
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.service-link:hover {
+    color: #ffffff;
 }
