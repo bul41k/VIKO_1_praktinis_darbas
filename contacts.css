@@ -25,10 +25,15 @@ header {
     margin: 30px 75px;
     align-items: baseline;
 }
+
+#main-title {
+    font-weight: 800;
+}
+
 ul {
     display: flex;
     flex-direction: row;
-    gap: 75px;
+    gap: 40px;
     list-style-type: none;
 }
 
@@ -50,14 +55,14 @@ header ul li a::after {
     transition: width 0.3s ease; 
 }
 
-header ul li a:hover {
+
+header ul li a:hover, header ul li a.active {
     color: #de2020; 
 }
 
-header ul li a:hover::after {
+header ul li a:hover::after, header ul li a.active::after {
     width: 100%;
 }
-
 
 /* main section */
 main {
@@ -67,14 +72,16 @@ main {
     margin: 0px 75px;
 } 
 .contact-container {
-    margin-top: 175px;
+    margin-top: 125px;
     display: flex;
     justify-content: space-between;
 }
 .contact-info {
     display: flex;
     flex-direction: column;
-    max-width: 450px;
+    width: 427px;
+    flex-shrink: 0;
+    box-sizing: border-box;
     gap: 15px;
 }
 .contact-info h1 {
@@ -98,6 +105,7 @@ hr {
 }
 .form-textarea {
     height: 200px;
+    resize: none;
 }
 
 .form-submit {

@@ -13,7 +13,16 @@ body {
     min-height: 100vh;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* header */
+.menu-toggle, .hamburger-btn {
+    display: none;
+}
 
 header {
     display: flex;
@@ -35,7 +44,7 @@ a {
 ul {
     display: flex;
     flex-direction: row;
-    gap: 75px;
+    gap: 40px;
     list-style-type: none;
 }
 
@@ -75,19 +84,21 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
 .hero-left {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    align-self: center;
     gap: 15px;
     width: 460px;
 }
 .hero img{
-    width: 800px;
-    height: 700px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 700px;
 }
 
 .hero .hero__title {
@@ -98,12 +109,12 @@ main {
     cursor: pointer;
     border: none;
     border-radius: 27px;
-    padding: 20px 25px;
+    padding: 20px 30px;
     font-size: 18px;
     font-weight: 400;
     background-color: #de2020ba !important;
     color: white;
-
+    text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .hero button:hover {
@@ -119,7 +130,7 @@ main {
 /* footer */
 .footer {
     margin-top: auto;
-    width: auto;
+    width: 100%;
     height: 50px;
     background-color: #942a2a;
 }
@@ -133,3 +144,170 @@ main {
     font-size: 18px;
     font-weight: 200;
 }
+
+
+
+/* Tablet */
+@media (max-width: 1100px) {
+    header {
+        margin: 26px 32px;
+        align-items: center;
+        gap: 24px;
+    }
+
+    header nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    header ul {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 12px;
+    }
+
+    header ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        margin: 0 32px;
+    }
+
+    .hero .hero__container {
+        gap: 28px;
+    }
+
+    .hero-left {
+        width: min(42%, 460px);
+        flex-shrink: 0;
+    }
+
+    .hero .hero__title {
+        font-size: clamp(38px, 5vw, 54px);
+    }
+
+    .hero img {
+        width: 58%;
+        max-height: 560px;
+        object-fit: contain;
+    }
+}
+
+/* Phone */
+@media (max-width: 700px) {
+    header {
+        position: relative;
+        margin: 18px 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    #main-title {
+        font-size: 22px;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin-left: auto;
+        padding: 4px 8px;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    header nav {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 8px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    header ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header ul li a {
+        display: inline-block;
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+
+    .hero {
+        margin: 0 20px;
+    }
+
+    .hero .hero__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .hero-left {
+        width: 100%;
+        margin-top: 14px;
+        align-items: center;
+    }
+
+    .hero .hero__title {
+        font-size: clamp(32px, 9vw, 46px);
+        line-height: 1.12;
+    }
+
+    .hero__actions {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero button {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+
+    .hero img {
+        display: block;
+        width: 100%;
+        max-width: 560px;
+        max-height: none;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .footer {
+        min-height: 50px;
+        height: auto;
+    }
+
+    .footer p {
+        padding: 12px 16px;
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+    

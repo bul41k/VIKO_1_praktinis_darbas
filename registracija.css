@@ -35,7 +35,7 @@ a {
 ul {
     display: flex;
     flex-direction: row;
-    gap: 75px;
+    gap: 40px;
     list-style-type: none;
 }
 
@@ -56,14 +56,13 @@ header ul li a::after {
     transition: width 0.3s ease; 
 }
 
-header ul li a:hover {
+header ul li a:hover, header ul li a.active {
     color: #de2020; 
 }
 
-header ul li a:hover::after {
+header ul li a:hover::after, header ul li a.active::after {
     width: 100%;
 }
-
 
 /* main section */
 main {
@@ -99,7 +98,9 @@ main {
     margin-top: 15px;
     padding: 20px 45px;
     border-radius: 35px;
+    cursor: pointer;
 }
+
 .form__input {
     margin-bottom: 10px;
     padding: 12px 15px;

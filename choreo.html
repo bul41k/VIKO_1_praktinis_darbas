@@ -18,44 +18,99 @@
                 <li><a href="contacts.html">Kontaktai</a></li>
                 <li><a href="galerija.html">Galerija</a></li>
                 <li><a href="registracija.html">Registracija</a></li>
-                <li><a href="stylius.html">Sokiu stylius</a></li>
+                <li><a href="stylius.html" class="active">Sokiu stylius</a></li>
                 <li><a href="tvarkarastis.html">Tvarkarastis</a></li>
                 <li><a href="kainorastis.html">Kainas</a></li>
+                <li><a href="teachers.html">Trenerius</a></li>
             </ul>
     </header>
 
     <!-- main section  -->
+<main class="choreo-page">
+        <div class="about-content__wrapper">
 
-        <div class="box">
+                <!-- sidebar -->
+            <aside class="sidebar-column">
 
-                <aside class="sidebar-column">
-                    <h3>Artimiausi renginiai</h3>
-                    <p><strong>Atvira pamoka:</strong></p><p>Šį ketvirtadienį 18:00 val. su naujuoju choreografu!</p>
-                    <br>
-                    <p><em>„Šokis yra paslaptis, kurią atskleidžia tavo judesiai.“</em></p>
-                </aside>
+                    <!-- artimiausi renginiai -->
+                    <section class="sidebar-section">
+                        <h3 class="sidebar-title">Artimiausi renginiai</h3>
+                        <ul class="sidebar-list">
+                            <li><strong>Atvira pamoka: </strong>Šį ketvirtadienį 18:00 val. su naujuoju choreografu!</li>
+                            <li><strong>Šokių kovos (Battle): </strong>Šeštadienį nuo 16:00 val. didžiojoje salėje.</li>
+                            <li><strong>Masterclass: </strong>Registracija į House stiliaus dirbtuves jau atidaryta!</li>
+                        </ul>
+                    </section>
 
-        <main class="breaking">
-            <h1 class="breaking__main-title">CHOREO</h1>
+                    <hr>
 
-            <section class="breaking__section">
-                <h2 class="breaking__section-title">Apie Choreo</h2>
-                <p class="breaking__text">Choreo – tai šiuolaikinis šokio stilius, 
+                    <!-- darbo laikas -->
+                    <section class="sidebar-section">
+                        <h3 class="sidebar-title">Darbo laikas</h3>
+                        <p class="sidebar-text"><strong>I-V:</strong> 15:00 – 21:00 val.</p>
+                        <p class="sidebar-text"><strong>VI:</strong> 12:00 – 18:00 val.</p>
+                        <p class="sidebar-text"><strong>VII:</strong> Nedirbame</p>
+                    </section>
+
+                    <hr>
+
+                    <!-- citata  -->
+                    <blockquote class="sidebar-quote">
+                        <p><em>„Šokis yra paslaptis, kurią atskleidžia tavo judesiai.“</em></p>
+                    </blockquote>
+
+                    <!-- button -->
+                    <a href="registracija.html" class="sidebar-btn">Registruotis į pamoką</a>
+
+            </aside>
+
+        <div class="choreo-content">
+            <h1 class="choreo__main-title">CHOREO</h1>
+
+            <section class="choreo__section">
+                <h2 class="choreo__section-title">Apie Choreo</h2>
+                <p class="choreo__text">Choreo – tai šiuolaikinis šokio stilius, 
                     jungiantis įvairių gatvės ir modernių šokių technikų elementus 
                     į vientisą, muzikalią choreografiją. Šiame stiliuje didžiausias dėmesys 
                     skiriamas muzikos detalumui, emocijos perdavimui, technikai ir preciziškam judesių atlikimui.</p> 
             </section>
 
-            <section class="breaking__section">
-                <h2 class="breaking__section-title">Choreo pažengusiems</h2>
-                <p class="breaking__text">Užsiėmimai skirti šokėjams, turintiems tvirtus šokio pagrindus
+            <section class="choreo__section">
+                <h2 class="choreo__section-title">Choreo pažengusiems</h2>
+                <p class="choreo__text">Užsiėmimai skirti šokėjams, turintiems tvirtus šokio pagrindus
                     ir norintiems išbandyti savo galimybes atliekant sudėtingas bei greitas autorines choreografijas. 
                     Treniruočių metu dirbama su muzikalumu, judesių tekstūra, plastika, izoliacijomis bei vaidybiniais elementais. 
                     Pagrindinis tikslas – ištobulinti atlikimo preciziškumą, gebėjimą greitai įsisavinti naują medžiagą ir užtikrintai 
                     jaustis prieš kamerą ar scenoje.</p>
             </section>
+
+                        <!-- teachers section -->
+            <section class="teachers-section">
+                <h2 class="teachers-title">TRENERIUS:</h2>
+                
+                <div class="teacher-card">
+                    <div class="avatar-container">
+                        <img src="img/JonasCHOREO.jpg" alt="Jonas - Choreo treneris" class="teacher-avatar">
+                    </div>
+                    
+                    <h3 class="teacher-name">JONAS</h3>
+                    
+                    <button class="btn-registration"><a href="registracija.html">REGISTRACIJA</a></button>
+                </div>
+            </section>
+            
         </div>
-        </main>
+        </div>
+</main>
+
+                    <!-- footer -->
+    <footer class="footer">
+        <div class="footer container">
+            <div class="footer-item">
+                <p>© 2026 Rhythm Pulse. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

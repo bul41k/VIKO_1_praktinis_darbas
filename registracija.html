@@ -16,10 +16,11 @@
                 <li><a href="apie.html">Apie</a></li>
                 <li><a href="contacts.html">Kontaktai</a></li>
                 <li><a href="galerija.html">Galerija</a></li>
-                <li><a href="registracija.html">Registracija</a></li>
+                <li><a href="registracija.html" class="active">Registracija</a></li>
                 <li><a href="stylius.html">Sokiu stylius</a></li>
                 <li><a href="tvarkarastis.html">Tvarkarastis</a></li>
                 <li><a href="kainorastis.html">Kainas</a></li>
+                <li><a href="teachers.html">Trenerius</a></li>
             </ul>
     </header>
     <!-- main section  -->
@@ -29,25 +30,32 @@
                 
                 <div class="registration-card__content">
                     <div class="registration-card__header">
-                        <h2 class="registration-card__title">Registration</h2>
+                        <h2 class="registration-card__title">Registacija</h2>
                     </div>
                     
                     <div class="registration-card__form-wrapper">   
                         <form class="form">
 
-                            <label class="form__label" for="fname">Full name:</label><br>
+                            <label class="form__label" for="fname">Pilnas vardas:</label><br>
                             <input class="form__input" type="text" id="fname" name="fname"><br>
 
-                            <label class="form__label" for="lname">Date of birth:</label><br>
+                            <label class="form__label" for="lname">Gimimo data:</label><br>
                             <input class="form__input" type="date" id="date" name="date"><br>
 
-                            <label class="form__label" for="styles">Choose your style</label><br>
-                            <input class="form__input" type="text" id="styles" name="styles"><br>
+                            <label class="form__label" for="styles">Pasirinkite stilius</label><br>
+                                <select class="form__input" id="styles" name="styles">
+                                    <option value="" disabled selected>Select style...</option>
+                                    <option value="hiphop">HipHop</option>
+                                    <option value="breaking">Breaking</option>
+                                    <option value="house">House</option>
+                                    <option value="popping">Popping</option>
+                                    <option value="choreo">Choreo</option>
+                                </select><br>
                             
                             <label class="form__label" for="email">Email</label><br>
                             <input class="form__input" type="email" id="email" name="email"><br>
 
-                            <label class="form__label" for="phone">Phone</label><br>
+                            <label class="form__label" for="phone">Telefonas</label><br>
                             <input class="form__input" type="tel" id="phone" name="phone"><br>
 
                             <input class="form__submit" type="submit" value="Submit">

@@ -15,12 +15,13 @@
         </h2>
             <ul>
                 <li><a href="apie.html">Apie</a></li>
-                <li><a href="contacts.html">Kontaktai</a></li>
+                <li><a href="contacts.html" class="active">Kontaktai</a></li>
                 <li><a href="galerija.html">Galerija</a></li>
                 <li><a href="registracija.html">Registracija</a></li>
                 <li><a href="stylius.html">Sokiu stylius</a></li>
                 <li><a href="tvarkarastis.html">Tvarkarastis</a></li>
                 <li><a href="kainorastis.html">Kainas</a></li>
+                <li><a href="teachers.html">Trenerius</a></li>
             </ul>
     </header>
 
@@ -29,7 +30,7 @@
         <div class="contact-container">
             
             <!-- left section -->
-            <div class="contact-info">
+            <aside class="contact-info">
                 <h1 class="contact-heading">Kontaktai</h1>
                 <hr>
                 <p class="contact-subtitle">Turite klausimų? Susisiekite su mumis!</p>
@@ -46,20 +47,20 @@
                     </p>
                 </div>
 
-            </div>
+            </aside>
 
             <!-- right section  -->
-            <div class="contact-form-wrapper">
+            <div class="contact-form__wrapper">
                 <form class="contact-form">
                     
                     <label class="form-label" for="vardas">Vardas *</label>
-                    <input class="form-input" type="text" id="vardas" name="vardas" required>
+                    <input class="form-input" type="text" id="vardas" name="vardas" placeholder="Vardas ir pavardė" required>
 
                     <label class="form-label" for="email">El. pašto adresas *</label>
-                    <input class="form-input" type="email" id="email" name="email" required>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="Parašykite savo el. paštą" required>
 
                     <label class="form-label" for="tekstas">Tekstas *</label>
-                    <textarea class="form-textarea" id="tekstas" name="tekstas" rows="6" required></textarea>
+                    <textarea class="form-textarea" id="tekstas" name="tekstas" rows="6" placeholder="Įrašykite pranešimą čia" required></textarea>
 
                     <button type="submit" class="form-submit">SIŲSTI</button>
 

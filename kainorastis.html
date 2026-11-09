@@ -20,52 +20,102 @@
                 <li><a href="registracija.html">Registracija</a></li>
                 <li><a href="stylius.html">Sokiu stylius</a></li>
                 <li><a href="tvarkarastis.html">Tvarkarastis</a></li>
-                <li><a href="kainorastis.html">Kainas</a></li>
+                <li><a href="kainorastis.html" class="active">Kainas</a></li>
+                <li><a href="teachers.html">Trenerius</a></li>
             </ul>
     </header>
 
     <!-- main section -->
-     <main>
+     <main class="price-page">
+        <div class="about-content__wrapper">
+
+                <!-- sidebar -->
+            <aside class="sidebar-column">
+
+                    <!-- artimiausi renginiai -->
+                    <section class="sidebar-section">
+                        <h3 class="sidebar-title">Artimiausi renginiai</h3>
+                        <ul class="sidebar-list">
+                            <li><strong>Atvira pamoka: </strong>Šį ketvirtadienį 18:00 val. su naujuoju choreografu!</li>
+                            <li><strong>Šokių kovos (Battle): </strong>Šeštadienį nuo 16:00 val. didžiojoje salėje.</li>
+                            <li><strong>Masterclass: </strong>Registracija į House stiliaus dirbtuves jau atidaryta!</li>
+                        </ul>
+                    </section>
+
+                    <hr>
+
+                    <!-- darbo laikas -->
+                    <section class="sidebar-section">
+                        <h3 class="sidebar-title">Darbo laikas</h3>
+                        <p class="sidebar-text"><strong>I-V:</strong> 15:00 – 21:00 val.</p>
+                        <p class="sidebar-text"><strong>VI:</strong> 12:00 – 18:00 val.</p>
+                        <p class="sidebar-text"><strong>VII:</strong> Nedirbame</p>
+                    </section>
+
+                    <hr>
+
+                    <!-- citata  -->
+                    <blockquote class="sidebar-quote">
+                        <p><em>„Šokis yra paslaptis, kurią atskleidžia tavo judesiai.“</em></p>
+                    </blockquote>
+
+                    <!-- button -->
+                    <a href="registracija.html" class="sidebar-btn">Registruotis į pamoką</a>
+
+            </aside>
+
         <section class="main-price">
-            <div class="box">
+            <h1 class="price-main-title">KAINOS</h1>
 
-                <div class="box-item">
-                
-                    <h3>STANDART</h3>
-                    <p class="price">800 EUR</p>
-                    <button><a href="registracija.html">Registracija</a></button>
-                    <p>Vienas stylius</p>
-                    <p>8 kartas per menesi</p>
-                
-                </div>
-
-                <div class="box-item">
-                    
-                        <h3>MINI</h3>
-                        <p class="price">100 EUR</p>
-                        <button><a href="registracija.html">Registracija</a></button>
-                        <p>Vienas stylius</p>
-                        <p>4 kartas per menesi</p>
+            <div class="price-list">
+                <!-- POPULAR -->
+                <div class="price-card popular">
+                    <span class="popular-badge">POPULIARIAUSIAS</span>
+                    <h3 class="price-card__title">STANDART</h3>
+                    <p class="price">80 EUR</p>
+                    <button><a href="registracija.html" class="price-card__button">Registracija</a></button>
+                    <p class="price-card__desc">Vienas pasirinktas stilius</p>
+                    <p class="price-card__desc">8 kartus per mėnesį (2 kartus per savaitę)</p>
                 
                 </div>
-
-                <div class="box-item">
+                <!-- MINI -->
+                <div class="price-card">
                     
-                    <h3>DOUBLE</h3>
-                    <p class="price">900 EUR</p>
-                    <button><a href="registracija.html">Registracija</a></button>
-                    <p>Du stylius</p>
-                    <p>16 kartas per menesi</p>
+                        <h3 class="price-card__title">MINI</h3>
+                        <p class="price">45 EUR</p>
+                        <button><a href="registracija.html" class="price-card__button">Registracija</a></button>
+                        <p class="price-card__desc">Vienas pasirinktas stilius</p>
+                        <p class="price-card__desc">4 kartus per mėnesį (1 kartą per savaitę)</p>
+                
+                </div>
+                <!-- DOUBLE -->
+                <div class="price-card">
+                    
+                    <h3 class="price-card__title">DOUBLE</h3>
+                    <p class="price">120 EUR</p>
+                    <button><a href="registracija.html" class="price-card__button">Registracija</a></button>
+                    <p class="price-card__desc">Du pasirinkti stiliai</p>
+                    <p class="price-card__desc">16 kartų per mėnesį (4 kartus per savaitę)</p>
                     
                 </div>
 
-                <div class="box-item">
+                <div class="price-card">
                     
-                    <h3>SINGLE CLASS</h3>
+                    <h3 class="price-card__title">SINGLE CLASS</h3>
                     <p class="price">10 EUR</p>
-                    <button><a href="registracija.html">Registracija</a></button>
-                    <p>Viena karta</p>
-                    <p>Vienas stylius</p>
+                    <button><a href="registracija.html" class="price-card__button">Registracija</a></button>
+                    <p class="price-card__desc">Vienkartinis apsilankymas</p>
+                    <p class="price-card__desc">1 pamoka pasirinktame stiliuje</p>
+                
+                </div>
+
+                <div class="price-card">
+                    
+                    <h3 class="price-card__title">FREE CLASS</h3>
+                    <p class="price">0 EUR</p>
+                    <button><a href="registracija.html" class="price-card__button">Registracija</a></button>
+                    <p class="price-card__desc">Pirmasis bandomasis apsilankymas</p>
+                    <p class="price-card__desc">1 nemokama pamoka (bet kuris stilius)</p>
                 
                 </div>
 
@@ -74,13 +124,13 @@
      </main>
 
      <!-- footer -->
-    <div class="footer">
+    <footer class="footer">
         <div class="footer container">
             <div class="footer-item">
                 <p>© 2026 Rhythm Pulse. Visos teisės saugomos.</p>
             </div>
         </div>
-    </div>
+    </footer>
 
 </body>
 </html>
