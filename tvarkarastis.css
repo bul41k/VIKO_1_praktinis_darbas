@@ -197,3 +197,257 @@ th, td {
 .sidebar-btn:hover {
     background-color: #8c0e0e;
 }
+
+
+
+.menu-toggle,
+.hamburger-btn {
+    display: none;
+}
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+    header {
+        width: calc(100% - 80px);
+        max-width: 1360px;
+        margin: 26px auto;
+        align-items: center;
+        gap: 24px;
+    }
+
+    header nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px 18px;
+    }
+
+    .about-content__wrapper {
+        width: calc(100% - 80px);
+        max-width: 1360px;
+        margin: 0 auto;
+        gap: 32px;
+    }
+
+    .sidebar-column {
+        flex: 0 0 clamp(300px, 30vw, 380px);
+        width: clamp(300px, 30vw, 380px);
+        height: auto;
+        min-height: 640px;
+        margin-top: 40px;
+        padding: 22px;
+        position: static;
+    }
+
+    .schedule {
+        flex: 1;
+        min-width: 0;
+    }
+
+
+    table {
+        width: 100%;
+        min-width: 0;
+        height: 450px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+        font-size: clamp(11px, 1vw, 14px);
+        overflow-wrap: anywhere;
+    }
+
+    th:first-child,
+    td:first-child {
+        width: 58px;
+    }
+}
+
+
+@media (min-width: 701px) and (max-width: 1100px) {
+    header {
+        margin: 26px 32px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px 18px;
+    }
+
+    header ul li a {
+        font-size: 14px;
+    }
+
+    .about-content__wrapper {
+        gap: 24px;
+        margin: 0 32px;
+    }
+
+    .sidebar-column {
+        flex: 0 0 32%;
+        width: 32%;
+        height: auto;
+        min-height: 0;
+        margin-top: 40px;
+        padding: 20px;
+        position: static;
+        gap: 16px;
+    }
+
+
+    .schedule {
+        flex: 1;
+        min-width: 0;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 700px;
+        height: 450px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    header {
+        position: relative;
+        margin: 18px 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin-left: auto;
+        padding: 4px 8px;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    header nav {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        padding: 8px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px 12px;
+    }
+
+
+    .about-content__wrapper {
+        flex-direction: column;
+        gap: 28px;
+        margin: 0 20px;
+    }
+
+    .schedule {
+        order: 1;
+        width: 100%;
+        min-width: 0;
+        overflow: visible;
+    }
+
+    .sidebar-column {
+        order: 2;
+        flex: none;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin-top: 0;
+        padding: 22px;
+        border-radius: 24px;
+        position: static;
+        gap: 18px;
+    }
+
+    .main-title {
+        margin: 20px 0;
+        font-size: 28px;
+    }
+
+
+    table {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        padding: 5px 2px;
+        font-size: 9px;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    th {
+        font-size: 8px;
+    }
+
+    th:first-child,
+    td:first-child {
+        width: 38px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer p {
+        padding: 12px 16px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .sidebar-column {
+    margin-bottom: 10px;
+    }
+}

@@ -123,3 +123,237 @@ main {
     font-size: 18px;
     font-weight: 200;
 }
+
+.registration-card__aside {
+    display: flex;
+    flex: 0 1 500px;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.registration-card__aside .registration-card__image {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+.menu-toggle,
+.hamburger-btn {
+    display: none;
+}
+
+/* Планшет */
+@media (max-width: 1050px) {
+
+    header {
+        margin: 26px 32px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px 18px;
+    }
+
+    header ul li a {
+        font-size: 14px;
+    }
+
+
+    .registration-card {
+        margin: 30px 32px;
+        gap: 40px;
+        align-items: center;
+    }
+
+
+    .registration-card__image {
+        width: calc(50% - 20px);
+        max-width: 500px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .registration-card__content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .registration-card__header h2 {
+        font-size: clamp(48px, 7vw, 68px);
+    }
+
+
+    .form,
+    .form__input {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .registration-card__aside {
+    flex: 0 1 50%;
+    }
+
+    .registration-card__aside .registration-card__image {
+    width: 100%;
+    max-width: 500px;
+    }
+
+    .registration-card__aside {
+    flex: 0 1 360px;
+    min-width: 260px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        position: relative;
+        margin: 18px 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+
+    .menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin-left: auto;
+        padding: 4px 8px;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    header nav {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        padding: 8px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px 12px;
+    }
+
+
+    .registration-card {
+        flex-direction: column;
+        gap: 28px;
+        margin: 24px 20px 36px;
+    }
+
+    .registration-card__image {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        align-self: center;
+    }
+
+    .registration-card__content,
+    .registration-card__form-wrapper,
+    .form {
+        width: 100%;
+    }
+
+    .registration-card__header {
+        margin-bottom: 15px;
+    }
+
+
+    .registration-card__header h2 {
+        font-size: clamp(42px, 11vw, 60px);
+    }
+
+
+    .form__input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .form__submit {
+        padding: 16px 32px;
+    }
+
+    .registration-card__aside {
+    order: 2;
+    flex: none;
+    width: 100%;
+    }
+
+    .registration-card__aside .registration-card__image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .registration-card__content {
+        order: 1;
+    }
+
+    .registration-card__content {
+    order: 1;
+    width: 100%;
+    align-items: stretch;
+}
+
+    .registration-card__content,
+    .registration-card__form-wrapper,
+    .form {
+        width: 100%;
+    }  
+
+
+    .footer {
+        height: auto;
+    }
+
+    .footer p {
+        padding: 12px 16px;
+        font-size: 13px;
+        text-align: center;
+    }
+}

@@ -14,6 +14,10 @@ body {
 }
 
 /* header section */
+.menu-toggle,
+.hamburger-btn {
+    display: none;
+}
 
 a {
     text-decoration: none;
@@ -143,3 +147,262 @@ button {
     font-size: 18px;
     font-weight: 200;
 }
+
+
+
+@media (min-width: 1051px) {
+
+        .contact-info h1 {
+        font-size: 78px;
+        line-height: 1.1;
+    }
+
+    .contact-info {
+        min-width: 0;
+    }
+    
+    header {
+        width: calc(100% - 150px);
+        max-width: 1290px;
+        margin: 30px auto;
+    }
+
+    .contact-page {
+        width: calc(100% - 150px);
+        max-width: 1290px;
+        margin: 0 auto;
+    }
+
+    .contact-container {
+        gap: 50px;
+    }
+
+    .contact-form__wrapper {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        max-width: 750px;
+    }
+}
+
+
+@media (max-width: 1050px) {
+    header {
+        margin: 26px 32px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px 18px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .contact-page {
+        margin: 0 32px;
+    }
+
+    .contact-container {
+        margin-top: 80px;
+        gap: 32px;
+    }
+
+    .contact-info {
+        width: 38%;
+        flex-shrink: 0;
+    }
+
+    .contact-info h1 {
+        font-size: clamp(52px, 8vw, 75px);
+    }
+
+    .contact-form__wrapper {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 700px) {
+    header {
+        position: relative;
+        margin: 18px 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+   
+    .menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin-left: auto;
+        padding: 4px 8px;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    header nav {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        padding: 8px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px 12px;
+    }
+
+    .contact-page {
+        margin: 0 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 36px;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+
+    /* Šrifto dydis prisitaiko prie ekrano pločio:
+   mažiausias – 42px, didžiausias – 64px,
+   o 12vw reiškia 12% naršyklės lango pločio. */
+    .contact-info h1 {
+        font-size: clamp(42px, 12vw, 64px);
+    }
+
+    .contact-form__wrapper,
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-textarea {
+        height: 160px;
+    }
+
+    .form-submit {
+        align-self: flex-start;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer p {
+        padding: 12px 16px;
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 701px) {
+    .contact-container {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(24px, 4vw, 60px);
+        align-items: start;
+    }
+
+    .contact-info {
+        width: auto;
+        min-width: 0;
+    }
+
+    .contact-info h1 {
+        font-size: clamp(42px, 5vw, 72px);
+        overflow-wrap: anywhere;
+    }
+
+    .contact-form__wrapper,
+    .contact-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .form-submit {
+        margin-bottom: 10px;
+    }
+}
+
+

@@ -245,3 +245,204 @@ h1, .hip-hop__main-title, .breaking__main-title, .choreo__main-title, .popping__
 }
 
 
+
+.menu-toggle,
+.hamburger-btn {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    header {
+        margin: 26px 32px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px 18px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+
+    .about-content__wrapper {
+        gap: 28px;
+        margin: 0 32px;
+    }
+
+    .sidebar-column {
+        width: 32%;
+        height: auto;
+        min-height: 0;
+        padding: 22px;
+        margin-top: 50px;
+        position: static;
+        gap: 16px;
+    }
+
+
+    .hip-hop-content,
+    .breaking-content,
+    .choreo-content,
+    .popping-content,
+    .house-content {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        max-width: 800px;
+        margin: 30px 0;
+    }
+
+    .avatar-container {
+        width: min(30vw, 260px);
+        height: min(30vw, 260px);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        position: relative;
+        margin: 18px 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+
+    .menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin-left: auto;
+        padding: 4px 8px;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    header nav {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        padding: 8px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px 12px;
+    }
+
+
+    .about-content__wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+
+    .hip-hop-content,
+    .breaking-content,
+    .choreo-content,
+    .popping-content,
+    .house-content {
+        order: 1;
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        margin: 24px auto;
+        gap: 20px;
+    }
+
+
+    h1,
+    .hip-hop__main-title,
+    .breaking__main-title,
+    .choreo__main-title,
+    .popping__main-title,
+    .house__main-title {
+        width: 100%;
+        margin: 24px 0;
+        font-size: clamp(30px, 9vw, 42px);
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .teachers-section {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .teacher-card {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar-container {
+        width: min(70vw, 260px);
+        height: min(70vw, 260px);
+    }
+
+    .sidebar-column {
+        order: 2;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        min-height: 0;
+        padding: 22px;
+        margin: 0 auto;
+        border-radius: 24px;
+        position: static;
+        gap: 18px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer p {
+        padding: 12px 16px;
+        font-size: 13px;
+        text-align: center;
+    }
+}

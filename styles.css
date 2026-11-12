@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: "Montserrat", sans-serif;
     background-color: #0D0D0D;
@@ -14,26 +16,31 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
-/* header */
-.menu-toggle, .hamburger-btn {
+.menu-toggle,
+.hamburger-btn {
     display: none;
 }
 
 header {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 75px;
     display: flex;
     justify-content: space-between;
-    margin: 30px 75px;
-    align-items: baseline;
+    align-items: center;
+    gap: 30px;
     color: #fff;
 }
 
-#main-title { 
-    font-weight: 800; 
+#main-title {
+    font-weight: 800;
+    white-space: nowrap;
 }
 
 a {
@@ -41,17 +48,19 @@ a {
     color: inherit;
 }
 
-ul {
+header ul {
     display: flex;
     flex-direction: row;
-    gap: 40px;
-    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 14px 32px;
+    list-style: none;
 }
 
 header ul li a {
     position: relative;
     padding-bottom: 5px;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 header ul li a::after {
@@ -59,52 +68,60 @@ header ul li a::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
-    height: 2px; 
-    background-color: #de2020; 
-    transition: width 0.3s ease; 
+    width: 0;
+    height: 2px;
+    background-color: #de2020;
+    transition: width 0.3s ease;
 }
 
 header ul li a:hover {
-    color: #de2020; 
+    color: #de2020;
 }
 
 header ul li a:hover::after {
     width: 100%;
 }
 
-/* main section */
+/* Основной блок */
 main {
     flex: 1;
 }
+
 .hero {
-    margin-left: 75px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 75px 40px;
 }
+
 .hero .hero__container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
 }
 
 .hero-left {
-    margin-top: 50px;
+    flex: 0 1 460px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 460px;
-}
-.hero img{
-    width: 100%;
-    max-width: 800px;
-    max-height: 700px;
+    margin-top: 50px;
 }
 
 .hero .hero__title {
     font-size: 60px;
     font-weight: 900;
 }
+
+.hero img {
+    flex: 1 1 0;
+    width: 0;
+    max-width: 800px;
+    max-height: 700px;
+    object-fit: contain;
+}
+
 .hero button {
     cursor: pointer;
     border: none;
@@ -112,57 +129,54 @@ main {
     padding: 20px 30px;
     font-size: 18px;
     font-weight: 400;
-    background-color: #de2020ba !important;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #de2020ba;
+    color: #fff;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
+
 .hero button:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(222, 32, 32, 0.8), 0 0 40px rgba(222, 32, 32, 0.4);
-    background-color: #de2020 !important;
+    box-shadow:
+        0 0 20px rgba(222, 32, 32, 0.8),
+        0 0 40px rgba(222, 32, 32, 0.4);
+    background-color: #de2020;
 }
 
 .hero button:active {
     transform: scale(1.02);
 }
 
-/* footer */
+/* Подвал */
 .footer {
     margin-top: auto;
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     background-color: #942a2a;
 }
+
 .footer .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 50px;
 }
+
 .footer p {
     font-size: 18px;
     font-weight: 200;
 }
 
-
-
-/* Tablet */
+/* Планшет и небольшие ноутбуки */
 @media (max-width: 1100px) {
     header {
-        margin: 26px 32px;
-        align-items: center;
+        padding: 26px 32px;
         gap: 24px;
     }
 
-    header nav {
-        flex: 1;
-        min-width: 0;
-    }
-
     header ul {
-        justify-content: flex-end;
-        flex-wrap: wrap;
         column-gap: 20px;
         row-gap: 12px;
     }
@@ -172,7 +186,7 @@ main {
     }
 
     .hero {
-        margin: 0 32px;
+        padding: 0 32px 36px;
     }
 
     .hero .hero__container {
@@ -180,8 +194,8 @@ main {
     }
 
     .hero-left {
-        width: min(42%, 460px);
-        flex-shrink: 0;
+        flex-basis: 42%;
+        margin-top: 20px;
     }
 
     .hero .hero__title {
@@ -189,18 +203,15 @@ main {
     }
 
     .hero img {
-        width: 58%;
         max-height: 560px;
-        object-fit: contain;
     }
 }
 
-/* Phone */
+/* Phone  */
 @media (max-width: 700px) {
     header {
         position: relative;
-        margin: 18px 20px;
-        align-items: center;
+        padding: 18px 20px;
         flex-wrap: wrap;
         gap: 12px;
     }
@@ -209,6 +220,7 @@ main {
         font-size: 22px;
     }
 
+
     .menu-toggle {
         position: absolute;
         width: 1px;
@@ -216,6 +228,7 @@ main {
         opacity: 0;
         pointer-events: none;
     }
+
 
     .hamburger-btn {
         display: block;
@@ -233,6 +246,7 @@ main {
         width: 100%;
     }
 
+
     .menu-toggle:checked ~ nav {
         display: block;
     }
@@ -241,6 +255,7 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 0;
+        width: 100%;
         padding: 8px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
@@ -257,7 +272,7 @@ main {
     }
 
     .hero {
-        margin: 0 20px;
+        padding: 0 20px 28px;
     }
 
     .hero .hero__container {
@@ -269,6 +284,7 @@ main {
     }
 
     .hero-left {
+        flex: none;
         width: 100%;
         margin-top: 14px;
         align-items: center;
@@ -289,8 +305,9 @@ main {
         font-size: 16px;
     }
 
+    /* Картинка сохраняет пропорции и не сплющивается */
     .hero img {
-        display: block;
+        flex: none;
         width: 100%;
         max-width: 560px;
         max-height: none;
@@ -299,7 +316,6 @@ main {
     }
 
     .footer {
-        min-height: 50px;
         height: auto;
     }
 
@@ -309,5 +325,3 @@ main {
         text-align: center;
     }
 }
-
-    
